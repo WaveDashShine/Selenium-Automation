@@ -1,6 +1,6 @@
 ﻿using TechTalk.SpecFlow;
 
-namespace Selenium_Web_Automation.Steps
+namespace SeleniumWebAutomation.Steps
 {
     [Binding]
     public sealed class StepDefinition1 : UtilityStep

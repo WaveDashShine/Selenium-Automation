@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Selenium_Web_Automation.Features
+namespace SeleniumWebAutomation.Features
 {
     using TechTalk.SpecFlow;
     

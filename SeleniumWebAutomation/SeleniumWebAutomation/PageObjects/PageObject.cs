@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-namespace Selenium_Web_Automation
+namespace SeleniumWebAutomation
 {
     public class PageObject
     {

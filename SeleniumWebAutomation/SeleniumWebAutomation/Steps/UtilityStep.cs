@@ -6,7 +6,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using TechTalk.SpecFlow;
 
-namespace Selenium_Web_Automation.Steps
+namespace SeleniumWebAutomation.Steps
 {
     [Binding]
     public class UtilityStep
