@@ -1,0 +1,1 @@
+https://help.crossbrowsertesting.com/selenium-testing/getting-started/best-practices-selenium-testing/
