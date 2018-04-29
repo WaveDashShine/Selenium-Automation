@@ -1,4 +1,6 @@
+Some basic information on Selenium can be found here:
 https://help.crossbrowsertesting.com/selenium-testing/getting-started/best-practices-selenium-testing/
+There is also a C# section in the sidebar with sample code
 
 Make sure to keep packages updated in Visual Studio via Tools > NuGet package manager > manage NuGet packages for solution
 
@@ -51,10 +53,6 @@ Why use unique HTML attributes? They are HTML attributes that makes it easier fo
 Selenium doesn’t actually NEED a special HTML attribute to find anything. Selenium can find elements by CSS or other HTML attributes like id. However, having some separate unique identifier provides us with the certainty that Selenium is selecting the right elements (i.e. other elements may share the same attributes and Selenium may interact with the wrong ones).
 
 The names you give the unique HTML attributes should be easily identifiable in a format of your choice as long as it's consistent (e.g. camelCase): e.g. headerFunButton
-
-If you want, you can go on any BuildDirect page to inspect some elements and you will be able to find some data-qa-ids scattered across many elements on the page.
-
-Note: If your teammates ever forget to add in a data-qa-id to the elements that you need to write tests for, make a new branch, add them in, and make a pull request. I usually assign senior QA members to review pull requests for UI automation tests. If the pull request is something super small like adding data-qa-ids, then quickly confirming with a teammate should be sufficient.
 
 ---
 
