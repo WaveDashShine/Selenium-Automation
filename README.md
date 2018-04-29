@@ -136,3 +136,38 @@ Right Click > Add > New Item… >> Installed > Visual C# Items > SpecFlow Featur
 Remember to make your Step Definitions Generic!
 Autosuggestion for Steps only works after you’ve backspaced to a SpecFlow keyword like When / Then / Given / And
 
+---
+
+#### Chapter 4: JavaScript in the Browser Console
+
+##### Pausing JavaScript in your Browser
+When you’re writing or debugging a test, you may run into problems with pop-ups or error messages or animations that disappear too fast for you see the element name that you’re supposed to grab.
+
+In Chrome, you can open up your developer Console with F12. Once the developer options are open, you can hit F8 to pause the JavaScript (the screen should darken and show that the JavaScript is paused).
+
+Ctrl + Shift + C will allow you to inspect an element. You can also use the little cursor icon in the top left to inspect an element. This will brighten the screen again but the JavaScript will still be paused.  You can use the element inspector to help you locate the details of those pesky elements that appear for only a brief moment.
+
+##### QuerySelector
+In the browser console you can use a JavaScript function to preview whether or not your Driver.FindElement(…) or Driver.FindElements(…) will successfully find an element.
+
+Driver.FindElement(…) returns a single element. If there are multiple elements on the page, then it will return the first element. 
+The corresponding JavaScript function is document.querySelector(…) 
+e.g. document.querySelector(‘[data-qa-id=”NameGoesHere”]’) will return the first element that has a data-qa-id of NameGoesHere
+
+If the element you want is actually the second element on the page, then you should probably use Driver.FindElements(…) combined with some LINQ query or a way to access the element you want.
+
+Driver.FindElements(…) returns an array of elements.
+The corresponding JavaScript function is document.querySelectorAll(…)
+e.g. document.querySelectorAll(‘[class=”button”]’) will return an array of all elements that have the class name button
+
+Note the syntax: ‘[Id-is-inside-brackets=”This is inside more quotations”]’ the whole parameter needs to be a string. If the syntax is wrong then the querySelector doesn’t work.
+
+OVERALL: document.querySelector(…) is essentially the same as Driver.FindElement(By.CssSelector(…))
+
+A great feature of document.querySelectorAll(…) is that you can peek into the details of the elements returned in the array such as the parent nodes or the HTML text.
+
+This also means you can use document.querySelectorAll(…)[0].text or document.querySelector(…).text to preview whether or not your Selenium Driver will be able to find the text of the elements before you even run the test.
+
+REMINDER: If you don’t like using querySelectors you can also preview your code via the Visual Studio Intermediate Window and breakpoints while running your UI tests in debugging mode.
+The intermediate window allows you to run code while the code is paused.
+e.g. Driver.FindElement(…).Text and will try to locate the element text specified
